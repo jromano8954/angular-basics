@@ -1,7 +1,13 @@
+<label>Server Name</label>
+<input 
+    type ="text" 
+    class="form-control"
+    (input)="onUpdateServerName($event)">
+<p>{{ serverName }}</p>
 <button 
-class="btn btn-primary" 
-[disabled]="!allowNewServer"
-(click)=" onCreateServer() "> Add Server</button>
+    class="btn btn-primary" 
+    [disabled]="!allowNewServer"
+    (click)=" onCreateServer() "> Add Server</button>
 <!-- Property binding[] and event binding()-->
 <p> {{ serverCreationStatus }} </p>
 <!-- String Interpolation-->
