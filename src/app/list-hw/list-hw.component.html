@@ -1,0 +1,12 @@
+<button 
+    class="btn btn-primary" 
+    (click)=" displayDetails() "> Display Details </button>
+<p 
+  *ngIf="details">
+  list-hw works!
+</p>
+<ul [ngClass]="{myList:true}">
+  <li 
+    *ngFor="let count of clickhistory"
+    [ngStyle]="{backgroundColor:getBColor(count), color:getColor(count)}"> {{ count }}</li>
+</ul>
