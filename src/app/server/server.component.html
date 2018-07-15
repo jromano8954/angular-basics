@@ -1,2 +1,5 @@
-<p>{{ 'server' }} with ID {{serverId}} is {{ getServerStatus() }}</p>
+<p [ngStyle]="{backgroundColor:getColor() }" 
+    [ngClass]="{online: serverStatus === 'online'}">
+    {{ 'server' }} with ID {{serverId}} is {{ getServerStatus() }}
+</p>
 <!-- {{}} contents must result in a string and cannot be multi-lined String interpolation-->
